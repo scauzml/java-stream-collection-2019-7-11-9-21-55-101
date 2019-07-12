@@ -4,6 +4,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MyMap {
 
@@ -17,15 +18,54 @@ public class MyMap {
     }
 
     public List<Integer> getTriple() {
-        throw new NotImplementedException();
+        return array.stream().map(e->e*3).collect(Collectors.toList());
+
     }
 
     public List<String> mapLetter() {
-        throw new NotImplementedException();
+
+         return array.stream().map(e->{
+             char e1=(char)(e+96);
+             String letter=String.valueOf(e1);
+             return letter;
+         }).collect(Collectors.toList());
     }
 
     public List<String> mapLetters() {
-        throw new NotImplementedException();
+       return array.stream().map(e->{
+           int a=e/26;
+           char e1;
+           char e2;
+           String result = null;
+           if(a==0){
+               result=String.valueOf((char)(e%26+(int)'a'-1));
+           }else if(a>0){
+               if(a==1){
+                   e1=(char)(a+(int)'a'-1);
+                   if (e % 26 == 0) {
+                       e1=(char)(a+(int)'a'-1);
+                       e2='z';
+                   }else {
+                       e2=(char)(e%26+(int)'a'-1);
+                   }
+               }else {
+                   if (e % 26 == 0) {
+                       e1=(char)(a+(int)'a'-1);
+                       e2='z';
+                   }else {
+                       e2=(char)(e%26+(int)'a'-1);
+                   }
+               }
+
+
+
+
+
+
+               result=String.valueOf(e1)+String.valueOf(e2);
+           }
+           return result;
+       }).collect(Collectors.toList());
     }
 
     public List<Integer> sortFromBig() {
