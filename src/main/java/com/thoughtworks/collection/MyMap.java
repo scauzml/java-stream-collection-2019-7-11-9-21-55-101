@@ -43,24 +43,19 @@ public class MyMap {
                if(a==1){
                    e1=(char)(a+(int)'a'-1);
                    if (e % 26 == 0) {
-                       e1=(char)(a+(int)'a'-1);
                        e2='z';
                    }else {
                        e2=(char)(e%26+(int)'a'-1);
                    }
                }else {
                    if (e % 26 == 0) {
-                       e1=(char)(a+(int)'a'-1);
+                       e1=(char)(a+(int)'a'-2);
                        e2='z';
                    }else {
+                       e1=(char)(a+(int)'a'-1);
                        e2=(char)(e%26+(int)'a'-1);
                    }
                }
-
-
-
-
-
 
                result=String.valueOf(e1)+String.valueOf(e2);
            }
