@@ -50,8 +50,9 @@ public class MyMapTest {
 
         assertThat(myMap.mapLetters()).isEqualTo(resultList);
     }
-
+    //预计15min/实际10min
     @Test
+
     public void should_sort_from_big_to_small() {
         //从大到小排序
         Integer[] array = new Integer[]{1, 2, 3, 4, 5};
@@ -64,7 +65,7 @@ public class MyMapTest {
 
         assertThat(myMap.sortFromBig()).isEqualTo(resultList);
     }
-
+    //预计1min/实际1min
     @Test
     public void should_sort_from_small_to_big() {
         //从小到大排序

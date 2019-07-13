@@ -8,13 +8,12 @@ import java.util.List;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class AddTest {
-
+    //预计15min/实际16min
     @Test
     public void should_get_sum_of_evens() {
         //求leftBorder 和rightBorder之间的偶数和
         int leftBorder = 1;
         int rightBorder = 10;
-
         Add add = new Add();
         assertThat(add.getSumOfEvens(leftBorder, rightBorder)).isEqualTo(30);
         assertThat(add.getSumOfEvens(rightBorder, leftBorder)).isEqualTo(30);
