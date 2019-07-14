@@ -7,7 +7,7 @@ import java.util.*;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class MyMapTest {
-
+    //预计15min/实际10min
     @Test
     public void should_map_to_triple() {
         //将集合A中得元素映射成集合B中的元素
@@ -22,7 +22,7 @@ public class MyMapTest {
 
         assertThat(myMap.getTriple()).isEqualTo(resultList);
     }
-
+    //预计15min/实际10min
     @Test
     public void should_map_to_letter() {
         //数字映射为字母

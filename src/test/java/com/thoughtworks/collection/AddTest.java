@@ -29,7 +29,7 @@ public class AddTest {
 //        assertThat(add.getSumOfOdds(leftBorder, rightBorder)).isEqualTo(25);
 //        assertThat(add.getSumOfOdds(rightBorder, leftBorder)).isEqualTo(25);
 //    }
-
+//预计4min/实际3min
     @Test
     public void should_get_triple_and_add_two() {
         //求数组中每个元素的3倍加2的和
@@ -40,7 +40,7 @@ public class AddTest {
 
         assertThat(add.getSumTripleAndAddTwo(arrayList)).isEqualTo(390);
     }
-
+    //预计5min/实际6min
     @Test
     public void should_get_triple_of_odd_and_add_two() {
         //求数组中奇数元素的3倍加2，偶数元素不变的数组
@@ -88,7 +88,7 @@ public class AddTest {
 //        Add add = new Add();
 //        assertThat(add.getMedianOfEven(arrayList)).isEqualTo((double) 3);
 //    }
-
+//预计10min/实际15min
     @Test
     public void should_return_average_of_even() {
         //求数组中所有偶数的平均数
@@ -113,7 +113,7 @@ public class AddTest {
 //        Integer unexistedElment = 2;
 //        assertThat(add.isIncludedInEvenIndex(arrayList, unexistedElment)).isEqualTo(true);
 //    }
-
+//预计10min/实际10min
     @Test
     public void should_return_unrepeated_elements_from_evens() {
         //找出数组中的所有偶数，从中剔除重复数据并返回
